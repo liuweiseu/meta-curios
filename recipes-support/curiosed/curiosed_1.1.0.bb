@@ -47,6 +47,9 @@ do_install:append() {
     install -m 0755 ${S}/lib/libatikcameras.so ${D}${libdir}
     install -m 0755 ${S}/lib/libflightapi.a ${D}${libdir}
 
+    # copy the nano executable
+    install -m 0755 ${S}/bin/nano ${D}${bindir}
+
     # rootfs files
     install -m 0755 ${S}/files/q7s/home/root/.profile ${D}/home/root/
     install -m 0644 ${S}/files/q7s/etc/systemd/network/05-eth0.network ${D}${sysconfdir}/systemd/network/
