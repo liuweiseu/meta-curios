@@ -20,7 +20,7 @@ LIC_FILES_CHKSUM = ""
 SRC_URI = "git://git@github.com/svwbeckwith/CuRIOS.git;protocol=ssh;branch=main"
 
 # commit(optional)
-SRCREV = "6e0c4c2294289fab224a2ebaa4dad026e122eb72"
+SRCREV = "${AUTOREV}"
 
 # Yocto will clone the source code to ${WORKDIR}/git
 S = "${WORKDIR}/git"
