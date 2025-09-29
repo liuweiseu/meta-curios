@@ -5,6 +5,7 @@ LICENSE = "CLOSED"
 DEPENDS = "zlib bzip2 curl openssl libusb cfitsio monit"
 
 RDEPENDS:${PN} += "bash"
+RDEPENDS_${PN} += "file"
 
 # Overrides
 SOLIBS = ".so"
@@ -48,7 +49,7 @@ do_install:append() {
     install -m 0755 ${S}/lib/libflightapi.a ${D}${libdir}
 
     # copy the nano executable
-    #install -m 0755 ${S}/bin/nano ${D}${bindir}
+    install -m 0755 ${S}/bin/nano ${D}${bindir}
 
     # rootfs files
     install -m 0755 ${S}/files/q7s/home/root/.profile ${D}/home/root/
